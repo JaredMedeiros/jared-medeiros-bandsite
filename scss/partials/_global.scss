@@ -1,24 +1,341 @@
+@use "./_fonts.scss"  as *;
+@use "./_colors.scss"  as *;
+@use "./_variables.scss" as *;
+@use "./mixins.scss" as *;
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    font-family: ;
+    margin: 0;
+}
+
+
+p {
+    font-family: AvenirNext;
     font-size: 0.8125rem;
-    font-weight: 400;
     line-height: 1.125rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    @include tablet {
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        padding-left: 0;
+    }
 
 }
 
-h1,
+h1 {
+   font-family: AvenirNext;
+   font-size: 1.5rem;
+   line-height: 2rem;
+   font-weight: 600;
+
+   @include tablet {
+       font-size: 3.75rem;
+       line-height: 4.25rem;
+   }
+
+}
+
 h2 {
+    font-family: AvenirNext;
     font-size: 1.5rem;
-    font-weight: 700;
     line-height: 2rem;
+    font-weight: 600;
+
+    @include tablet {
+        font-size:2.25rem;
+        line-height: 2.75rem;
+    }
 }
 
-h3{
+h3 {
+    font-family: AvenirNext;
     font-size: 0.875rem;
-    font-weight: 600;
     line-height: 1.375rem;
+    font-weight: 600; 
+    
+    @include tablet {
+        font-size:1.5rem;
+        line-height: 2rem;
+    }
+}
+
+img {
+    width: 100%;
+    padding: .5rem 1rem .5rem 1rem;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+    text-decoration: none;
+
+    @include mobile {
+        width:100%;
+        text-align: center;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.nav-bar {
+    background-color: $black;
+    width: 100vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin:0;
+    color: $white;
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+        align-content: center;
+    }
+   
+    &__logo {
+        max-height: 1.25rem;
+        min-height:.5rem;
+        min-width: 4rem;
+        max-width: 7.5rem;
+        padding:0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            margin: 2.25rem;
+        }
+
+        @include desktop {
+            margin-left: 3.9375rem;
+        }
+    }
+   
+    &__tabs {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding-left: 0;
+
+        @include tablet {
+            justify-content: flex-start;
+        }
+    }
+    
+    &__tabs-choice{
+        color: $mercury;
+        font-family: AvenirNext;
+        font-size: 0.875;
+        line-height: 1.375;
+        font-weight: 600;
+        padding: 0 0 0.8125rem 0;  
+        border-bottom: transparent solid 0.1875rem;
+        
+        @include mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }    
+
+        @include tablet {
+            font-size: 1rem;
+            line-height: 2rem;
+            padding: 2.25rem 0 2.25rem 0;
+            margin: 0 2.25rem 0 2.25rem;
+        }
+    }
+
+    &__tabs-choice:hover {
+        color: $white;
+        border-bottom: $white solid 0.1875rem;
+        padding-bottom: 0.8125rem;
+    }
+
+    &__tabs-current-choice {
+        color: $white;
+        font-family: AvenirNext;
+        font-size: 0.875;
+        line-height: 1.375;
+        font-weight: 600;
+        border-bottom: $white solid 0.1875rem;
+        padding-bottom: 0.8125rem;
+
+        @include mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }    
+
+        @include tablet {
+            font-size: 1rem;
+            line-height: 2rem;
+            padding: 2.25rem 0 2.25rem 0;
+            margin: 0 2.25rem 0 2.25rem;
+        }    
+    }
+}
+
+
+.contact {
+    background-color: $black;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    
+    @include tablet {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }    
+
+    @include desktop {
+        padding-left: 3.9375rem;
+        padding-right: 3.9375rem;
+    }
+
+    &__header {
+        @include tablet {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: flex-start;
+        width: 100%;
+        margin-bottom: 2.25rem;
+        }
+    
+        &--left {
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-end;
+                width: 60%;
+            }
+        }    
+        
+        &--right {
+            @include tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-end;
+                width:40%;
+            }    
+        }
+    }    
+
+    &__title {
+        padding-left: 1rem;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            padding-left: 0rem;
+            margin-bottom: 0;
+        }
+    }
+
+    &__logo--desktop {
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            max-height: 1.25rem;
+            min-height:.5rem;
+            min-width: 4rem;
+            max-width: 7.5rem;  
+            padding: 0;
+        }
+    }
+
+    &__card-grid {
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+    }
+
+    &__card {
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-right: 3rem;
+            margin-left: 0;
+        }
+    }
+}
+
+
+.social {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    @include tablet {
+        margin-left: 1rem;
+    }    
+
+    &__icon {
+        height: 2.5rem;
+
+        @include tablet {
+           margin-bottom: 0;
+       }
+    }
+   
+    &__subtitle {
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 0;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 600rem;
+        }
+    }
+}
+
+
+.footer {
+    background-color: $black;
+    color:$white;
+    padding: 4rem 0 1rem 0;
+
+    @include tablet {
+        padding: 2.25rem 0 2.25rem 2.25rem;
+    }
+
+    @include desktop {
+        padding-left: 3.9375rem;
+        padding-right: 3.9375rem;
+    }
+    
+    &__logo--mobile {
+        max-height: 1.25rem;
+        min-height:.5rem;
+        min-width: 4rem;
+        max-width: 7.5rem;
+        padding: 0 0 0 1rem;
+
+        @include tablet {
+            display: none;
+        }
+    }   
 }
