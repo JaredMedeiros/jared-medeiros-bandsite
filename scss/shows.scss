@@ -16,20 +16,29 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    margin:0;
     padding: 1.5rem 1rem 1.5rem 1rem;
 
     @include tablet {
-       padding-left: 2.25rem; 
+        justify-content: flex-start;
+        height: 63vw;
+        padding: 0;
     }
 
-    @include desktop {
-        padding-left: 3.9375rem;
-    }
-    
     &__title {
         color: $white;
         margin:0;
         padding-bottom:1rem;
+    
+        @include tablet {
+            padding-left: 2.25rem;
+            padding-bottom: 4rem;
+            margin:0;
+        }
+ 
+        @include desktop {
+            padding-left: 3.9375rem;
+        }
     }
 
     &__subtitle {
@@ -38,18 +47,28 @@
         font-size: 0.875rem;
         line-height: 1.375rem;
         font-weight: 600;
-        padding:1rem 0 1rem 0;
+        padding: 1rem 0 1rem 0;
         margin:0;
+
+        @include tablet {
+            font-size:1.5rem;
+            line-height: 2rem;
+            padding: 4.5rem 0 1rem 2.25rem;
+            margin: 0;
+        }
     }
 
-    @include tablet {
-        font-size: 1rem;
-        line-height: 2rem;
-        padding: 2.25rem 0 2.25rem 0;
-        margin: 0 2.25rem 0 2.25rem;
-    }    
+    &__soundcloud {
+        width: 100%;
+        height: 8.4375rem;
+         
+        @include tablet {
+            width:50%;
+            height: 10rem;
+            padding-left: 2.25rem;
+        }
+    }
 }
-
 .shows {
     background-color: $white;
     display:flex;
@@ -57,9 +76,13 @@
     justify-content: space-around;
     align-items: flex-start;
     margin: 1.5rem 0 1.5rem 0;
-    
+
     &__title {
         padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 2.25rem;
+        }
     }
 
     &__card {
@@ -71,6 +94,15 @@
         margin: 0 0 1rem 0;
         padding-bottom: 1rem;
         border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            width:calc(100% - 2.25rem);
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 1.125rem 0 1.125rem;
+            margin: 0 1.125rem 1rem 1.125rem;
+        }
     }
 
     &__card:hover {
@@ -85,22 +117,68 @@
         font-weight:600;
         color: $mercury;
         margin: 0;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
+    &__subtitle-tablet {
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            font-weight:600;
+            color: $mercury;
+            margin: 0;
+            width: 25%;
+        }
+
+    }
+
+    &__subtitle-tablet-card {
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 2.25rem;
+            width: calc(100% - 2.25rem);
+        }    
     }
 
     &__copy {
       padding-bottom: .6rem;
       padding-left:1rem;
       font-weight: 400;
+      color: $black;
+
+      @include tablet {
+          padding:0;
+          width:25%;
+        }
 
         &--bold {
             padding-bottom: .6rem;
             padding-left: 1rem;
             font-weight: 600;
+            color: $black;
+            width:25%;
+
+            @include tablet {
+                padding:0;
+            }
         }
     }
 
     &__button {
         width: 93vw;
+        height: 2.5rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,6 +190,13 @@
         font-family: AvenirNext;
         font-size:16px;
         font-weight: 600;
+
+        @include tablet {
+            width: 25%;
+            max-width: 9.375rem;
+            margin: 0 2.25rem 0 0;
+            padding: 0;
+        }
     }
 
     &__button:hover {
