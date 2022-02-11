@@ -7,8 +7,11 @@
     box-sizing: border-box;
 }
 
+html
 body {
     margin: 0;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 
@@ -136,8 +139,8 @@ a {
     &__tabs-choice{
         color: $mercury;
         font-family: AvenirNext;
-        font-size: 0.875;
-        line-height: 1.375;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
         font-weight: 600;
         padding: 0 0 0.8125rem 0;  
         border-bottom: transparent solid 0.1875rem;
@@ -215,7 +218,7 @@ a {
         flex-direction: row;
         align-items: baseline;
         justify-content: flex-start;
-        width: 100%;
+        // width: 100%;
         margin-bottom: 2.25rem;
         }
     

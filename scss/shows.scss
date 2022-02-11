@@ -1,0 +1,120 @@
+@use './partials/_global.scss' as *;
+@use './partials/_fonts.scss' as *;
+@use './partials/_colors.scss' as *;
+@use './partials/mixins.scss' as *;
+@use './partials/variables.scss' as *;
+
+
+.hero {
+    width: 100vw;
+    height:75vw;
+    background-image: linear-gradient(0deg, rgba(50, 50, 50, 0.5),  rgba(50, 50, 50, 0.5)), url(../../assets/images/hero-shows.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+
+    @include tablet {
+       padding-left: 2.25rem; 
+    }
+
+    @include desktop {
+        padding-left: 3.9375rem;
+    }
+    
+    &__title {
+        color: $white;
+        margin:0;
+        padding-bottom:1rem;
+    }
+
+    &__subtitle {
+        color: $white;
+        font-family: AvenirNext;
+        font-size: 0.875rem;
+        line-height: 1.375rem;
+        font-weight: 600;
+        padding:1rem 0 1rem 0;
+        margin:0;
+    }
+
+    @include tablet {
+        font-size: 1rem;
+        line-height: 2rem;
+        padding: 2.25rem 0 2.25rem 0;
+        margin: 0 2.25rem 0 2.25rem;
+    }    
+}
+
+.shows {
+    background-color: $white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin: 1.5rem 0 1.5rem 0;
+    
+    &__title {
+        padding-left: 1rem;
+    }
+
+    &__card {
+        width:100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin: 0 0 1rem 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $mercury;
+    }
+
+    &__card:hover {
+        background-color: $alabaster;
+    }
+
+    &__card:active {
+        background-color: $mercury;
+    }
+
+    &__subtitle {
+        font-weight:600;
+        color: $mercury;
+        margin: 0;
+    }
+
+    &__copy {
+      padding-bottom: .6rem;
+      padding-left:1rem;
+      font-weight: 400;
+
+        &--bold {
+            padding-bottom: .6rem;
+            padding-left: 1rem;
+            font-weight: 600;
+        }
+    }
+
+    &__button {
+        width: 93vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.75rem 1rem 0.75rem 1rem;
+        border-radius: 0.25rem;
+        color: $white;
+        background-color: $black;
+        margin:0 1rem 0 1rem;
+        font-family: AvenirNext;
+        font-size:16px;
+        font-weight: 600;
+    }
+
+    &__button:hover {
+        background-color: $darkblack;
+    }
+}
