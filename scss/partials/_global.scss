@@ -123,7 +123,7 @@ a {
     }
    
     &__tabs {
-        width: 100vw;
+        width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -144,7 +144,7 @@ a {
         border-bottom: transparent solid 0.1875rem;
         
         @include mobile {
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -175,7 +175,7 @@ a {
         padding-bottom: 0.8125rem;
 
         @include mobile {
-            width: 100%;
+            width: 50%;
             display: flex;
             flex-direction: row;
             justify-content: center;

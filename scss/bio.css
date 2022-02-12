@@ -139,7 +139,7 @@ a {
   }
 }
 .nav-bar__tabs {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -161,7 +161,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .nav-bar__tabs-choice {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -192,7 +192,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .nav-bar__tabs-current-choice {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
