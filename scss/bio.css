@@ -541,9 +541,30 @@ a {
   align-items: flex-start;
   padding-right: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .conversation {
+    padding-right: 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conversation {
+    padding-right: 21rem;
+  }
+}
 .conversation__title {
   color: #323232;
   padding-left: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__title {
+    padding-left: 2.25rem;
+    padding-top: 2rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conversation__title {
+    padding-left: 3.9375rem;
+  }
 }
 .conversation__container {
   padding-left: 1rem;
@@ -553,6 +574,16 @@ a {
   align-items: flex-start;
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .conversation__container {
+    padding-left: 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conversation__container {
+    padding-left: 21rem;
+  }
+}
 .conversation__form {
   display: flex;
   flex-direction: column;
@@ -561,10 +592,11 @@ a {
   padding-left: 1rem;
 }
 .conversation__profile-pic {
-  width: 2.555rem;
+  width: 2.25rem;
   height: 2.25rem;
   padding: 0;
   border-radius: 50%;
+  margin-top: 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__profile-pic {
@@ -589,8 +621,18 @@ a {
   border-style: solid;
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 768px) {
+  .conversation__input {
+    height: 3rem;
+  }
+}
 .conversation__text-area {
   height: 7rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__text-area {
+    height: 10rem;
+  }
 }
 
 .button {
@@ -609,6 +651,17 @@ a {
   margin-bottom: 1.5rem;
   margin-top: 0.5rem;
 }
+@media screen and (min-width: 768px) {
+  .button {
+    width: 23%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .button__container {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 
 .comment {
   display: flex;
@@ -620,6 +673,17 @@ a {
   margin-bottom: 1rem;
   padding-left: 0;
 }
+@media screen and (min-width: 768px) {
+  .comment {
+    margin: 0 0 2rem 6rem;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .comment {
+    margin-left: 21rem;
+    margin-bottom: 3rem;
+  }
+}
 .comment__post {
   display: flex;
   flex-direction: row;
@@ -629,6 +693,12 @@ a {
   border-top: 1px solid #e1e1e1;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .comment__post {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
 }
 .comment__picture {
   width: 2.555rem;
