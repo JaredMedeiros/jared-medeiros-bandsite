@@ -574,6 +574,7 @@ ol, ul {
   font-weight: 600;
   color: #e1e1e1;
   margin: 0;
+  padding-left: 1rem;
 }
 @media screen and (min-width: 768px) {
   .shows__subtitle {

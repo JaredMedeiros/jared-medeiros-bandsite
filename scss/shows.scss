@@ -212,10 +212,11 @@ ol, ul {
     }
 
     &__subtitle {
-        font-size: 00.875rem;
+        font-size: 0.875rem;
         font-weight:600;
         color: $mercury;
         margin: 0;
+        padding-left: 1rem;
 
         @include tablet {
             display: none;
