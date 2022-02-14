@@ -19,6 +19,7 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   margin: 0;
 }
@@ -138,7 +139,7 @@ a {
   }
 }
 .nav-bar__tabs {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -152,15 +153,15 @@ a {
 .nav-bar__tabs-choice {
   color: #e1e1e1;
   font-family: AvenirNext;
-  font-size: 0.875;
-  line-height: 1.375;
+  font-size: 0.875rem;
+  line-height: 1.375rem;
   font-weight: 600;
   padding: 0 0 0.8125rem 0;
   border-bottom: transparent solid 0.1875rem;
 }
 @media screen and (max-width: 767px) {
   .nav-bar__tabs-choice {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -191,7 +192,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .nav-bar__tabs-current-choice {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-direction: row;
     justify-content: center;

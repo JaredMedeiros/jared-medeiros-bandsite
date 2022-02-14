@@ -181,3 +181,224 @@
     }
 }
 
+.conversation {
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding-right: 1rem;
+
+    @include tablet {
+        padding-right: 6rem;
+    }
+
+    @include desktop {
+        padding-right: 21rem;
+    }
+    
+    &__title {
+        color: $black;
+        padding-left: 1rem;
+
+        @include tablet {
+            padding-left: 2.25rem;
+            padding-top: 2rem;
+        }
+
+        @include desktop {
+            padding-left: 3.9375rem;
+        }
+    
+    }
+
+    &__container {
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+
+        @include tablet {
+            padding-left: 6rem;
+        }
+        
+        @include desktop {
+            padding-left: 21rem;
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 100%;
+        padding-left: 1rem;
+    }
+
+    &__profile-pic {
+        width: 2.25rem;
+        height: 2.25rem;
+        padding: 0;
+        border-radius: 50%;
+        margin-top: 1.5rem;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+    &__label {
+        font-family: AvenirNext;
+        color: $mercury;
+        font-weight: 400;
+        padding-bottom: .5rem;
+    }
+
+    &__input {
+        font-family: AvenirNext;
+        background-color: $alabaster;
+        border-color: $mercury;
+        color: $black;
+        border-radius: 0.25rem;
+        width: 100%;
+        height: 2.25rem;
+        border: 1px solid $mercury;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            height: 3rem;
+        } 
+    }
+
+    &__text-area {
+        height: 7rem;
+
+        @include tablet {
+            height: 10rem;
+        }
+    }
+}
+
+.button {
+    width: 100%;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.25rem;
+    border-style: none;
+    color: $white;
+    background-color: $black;
+    font-family: AvenirNext;
+    font-size:16px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    margin-top: .5rem;
+
+    @include tablet {
+        width: 23%;
+    }
+
+    &__container {
+        @include tablet {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: space-evenly;
+    margin-left: 1rem;
+    border-bottom: 1px solid $mercury;
+    margin-bottom: 1rem;
+    padding-left: 0;
+
+    @include tablet {
+       margin: 0 0 2rem 6rem;
+    }
+
+    @include desktop {
+        margin-left: 21rem;
+        margin-bottom: 3rem;
+    }
+    
+
+    &__post {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        border-top: 1px solid $mercury;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @include tablet {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+    }
+
+    &__picture {
+        width: 2.555rem;
+        height: 2.25rem;
+        background-color: $mercury;
+        border-radius: 50%;
+    }
+
+    &__profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        width: 100%;
+        margin-left: 1rem;
+    }
+
+    &__user {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: .75rem;
+        width: 100%;
+        
+    }
+
+    &__name {
+        font-weight: 600;
+        color: $black;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__date {
+        color: $mercury;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__copy {
+        color: $black;
+        margin: 0;
+        padding:0;
+        text-align: left;
+    }
+}
+
+input:focus {
+    outline: none;
+    border-color: $black;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: $black;
+}
