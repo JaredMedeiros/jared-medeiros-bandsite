@@ -141,9 +141,7 @@ ol, ul {
         flex-direction: row;
         justify-content: space-evenly;
         align-items: flex-start;
-        padding-right: 3.9375rem;
-        
-
+        padding-right: 3.9375rem;   
     }
 
     &__title {
@@ -193,8 +191,8 @@ ol, ul {
             flex-direction: row;
             align-items: center;
             justify-content: flex-start;
-            padding: 0 1.125rem 0 1.125rem;
-            margin: 0 1.125rem 1rem 1.125rem;
+            padding: 1rem 1.125rem 0 1.125rem;
+            margin: 0 1.125rem 0 1.125rem;
         }
         
         @include desktop {

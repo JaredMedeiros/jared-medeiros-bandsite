@@ -63,7 +63,6 @@ commentsArray.forEach((comment) => {
 
 //Create a function that allows users to submit comments to the page
 const formCta = document.querySelector(".conversation__form")
-let inputField = document.querySelector(".coversation__label")
 
 formCta.addEventListener('submit',(event) => {
     event.preventDefault();
@@ -90,3 +89,4 @@ formCta.addEventListener('submit',(event) => {
     }    
 })
 
+    

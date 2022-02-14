@@ -81,6 +81,6 @@ function displayShows (arr) {
 }
 
 //create a function that calls back the display function once for each array object
-showsArray.forEach ((recipe) => {
-    displayShows(recipe);
+showsArray.forEach ((show) => {
+    displayShows(show);
 })
