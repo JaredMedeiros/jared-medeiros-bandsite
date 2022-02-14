@@ -60,3 +60,33 @@ function displayComments (arr) {
 commentsArray.forEach((comment) => {
     displayComments(comment)
 })
+
+//Create a function that allows users to submit comments to the page
+const formCta = document.querySelector(".conversation__form")
+let inputField = document.querySelector(".coversation__label")
+
+formCta.addEventListener('submit',(event) => {
+    event.preventDefault();
+
+    let userName = event.target.commentName.value;
+    let today = new Date();
+    let commentDate = ("0" + (today.getMonth() + 1)).slice(-2) + "/" + today.getDate() + "/" + today.getFullYear();
+    let userComment = event.target.commentCopy.value;
+    let nameInput = document.getElementById("conversation-name");
+    let commentInput = document.getElementById("conversation-comment");
+
+    if (userName && userComment) {
+        commentList.innerText = '';
+        nameInput.value = '';
+        commentInput.value = '';
+        commentsArray.unshift({
+            name: userName,
+            date: commentDate,
+            comment: userComment
+        })
+        commentsArray.forEach((comment) => {
+            displayComments(comment);
+        })
+    }    
+})
+
