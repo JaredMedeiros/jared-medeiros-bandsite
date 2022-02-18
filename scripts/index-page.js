@@ -88,5 +88,3 @@ formCta.addEventListener('submit',(event) => {
         })
     }    
 })
-
-    

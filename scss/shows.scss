@@ -205,7 +205,8 @@ ol, ul {
         background-color: $alabaster;
     }
 
-    &__card:active {
+    &__card-active {
+        @extend .shows__card;
         background-color: $mercury;
     }
 
