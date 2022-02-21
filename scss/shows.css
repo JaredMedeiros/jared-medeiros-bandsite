@@ -569,6 +569,27 @@ ol, ul {
 .shows__card-active {
   background-color: #e1e1e1;
 }
+@media screen and (min-width: 768px) {
+  .shows__card-active {
+    width: calc(100% - 2.25rem);
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem 1.125rem 0 1.125rem;
+    margin: 0 1.125rem 0 1.125rem;
+    background-color: #e1e1e1;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows__card-active {
+    padding-right: 0;
+    margin-right: 0;
+    background-color: #e1e1e1;
+  }
+}
+.shows__card-active:hover {
+  background-color: #e1e1e1;
+}
 .shows__subtitle {
   font-size: 0.875rem;
   font-weight: 600;

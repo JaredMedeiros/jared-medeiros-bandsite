@@ -47,6 +47,25 @@ function getShowDates() {
         showsArray.forEach(showArr => {
             displayShowDates (showArr)
         })
+        function toggleColor(show) {
+            for (let i = 0; i < show.length; i++) {
+              show[i].addEventListener("click", function (e) {
+                for (let i = 0; i < show.length; i++) {
+                  if (this !== show[i]) {
+                    show[i].classList.remove("shows__card-active");
+                  } else if (
+                    this.classList.contains("shows__card-active") === true
+                  ) {
+                    this.classList.remove("shows__card-active");
+                  } else {
+                    this.classList.add("shows__card-active");
+                  }
+                }
+                e.preventDefault();
+              });
+            }
+          }
+          toggleColor(document.querySelectorAll(".shows__card"));
     })
     .catch((error) => {
         console.log(error);
@@ -111,14 +130,4 @@ function displayShowDates (showArr) {
 
 getShowDates();
 
-
-let show = document.querySelector(".shows__card");
-show.classList.toggle("shows__card-active");
-
-
-
-//create a function that calls back the display function once for each array object
-// sho.forEach ((showDate) => {
-//     displayShowDates(showDate);
-// })
 
