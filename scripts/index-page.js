@@ -18,23 +18,23 @@ const commentUrl = "https://project-1-api.herokuapp.com/comments?api_key=" + api
 let commentContainer = document.querySelector('.comment');
 
 function getComments() {
-axios  
-.get(commentUrl)
-.then((response) => {
-    // let commentArray = 
-    response.data.sort((a,b) => {
-        return b.timestamp - a.timestamp;
+    axios  
+    .get(commentUrl)
+    .then((response) => {
+        // let commentArray = 
+        response.data.sort((a,b) => {
+            return b.timestamp - a.timestamp;
+        });
+        commentContainer.innerText = "";
+        // console.log(commentArray);
+        response.data.forEach((comment) => {
+            displayComments(comment);
+        });
+    })
+    .catch((error) => {
+        console.log(error);
     });
-    commentContainer.innerText = "";
-    // console.log(commentArray);
-    response.data.forEach((comment) => {
-        displayComments(comment);
-    });
-})
-.catch((error) => {
-    console.log(error);
-});
-}
+    }
 
 function displayComments (comm) {
     let comment = document.createElement("li");
