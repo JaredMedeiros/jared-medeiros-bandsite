@@ -273,8 +273,33 @@
         } 
     }
 
+    &__input-error {
+        font-family: AvenirNext;
+        background-color: $alabaster;
+        border-color: red;
+        color: $black;
+        border-radius: 0.25rem;
+        width: 100%;
+        height: 2.25rem;
+        border: 1px solid $mercury;
+        margin-bottom: 1rem;
+
+        @include tablet {
+            height: 3rem;
+        } 
+    }
+
     &__text-area {
         height: 7rem;
+
+        @include tablet {
+            height: 10rem;
+        }
+    }
+
+    &__text-area-error {
+        height: 7rem;
+        border-color:red;
 
         @include tablet {
             height: 10rem;
@@ -308,6 +333,11 @@
             justify-content: flex-end;
         }
     }
+    
+}
+
+.button:hover {
+    background-color: $darkblack;
 }
 
 .comment {

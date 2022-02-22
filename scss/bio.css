@@ -626,11 +626,36 @@ a {
     height: 3rem;
   }
 }
+.conversation__input-error {
+  font-family: AvenirNext;
+  background-color: #fafafa;
+  border-color: red;
+  color: #323232;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 2.25rem;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .conversation__input-error {
+    height: 3rem;
+  }
+}
 .conversation__text-area {
   height: 7rem;
 }
 @media screen and (min-width: 768px) {
   .conversation__text-area {
+    height: 10rem;
+  }
+}
+.conversation__text-area-error {
+  height: 7rem;
+  border-color: red;
+}
+@media screen and (min-width: 768px) {
+  .conversation__text-area-error {
     height: 10rem;
   }
 }
@@ -661,6 +686,10 @@ a {
     display: flex;
     justify-content: flex-end;
   }
+}
+
+.button:hover {
+  background-color: #000000;
 }
 
 .comment {
